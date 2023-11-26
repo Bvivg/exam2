@@ -530,6 +530,7 @@ body {
 }
 .selectedCars-card {
   display: none;
+  flex-direction: column;
 }
 .footer {
   background: url(../img/Mask\ Group\ \(4\).png);
@@ -547,8 +548,9 @@ body {
     align-items: center;
     justify-content: space-between;
     table {
-      text-align: left;width: 45%;
-      tr{
+      text-align: left;
+      width: 45%;
+      tr {
         width: 50%;
       }
     }
@@ -674,17 +676,17 @@ body {
       min-width: 100%;
       display: flex;
       align-items: center;
-      img{
+      img {
         width: 100%;
       }
       flex-direction: column;
       justify-content: space-between;
       table {
         text-align: left;
-        tr{
+        tr {
           font-size: 14px;
         }
-        td{
+        td {
           font-size: 14px;
         }
       }
@@ -700,8 +702,9 @@ body {
         display: flex;
         align-items: center;
         gap: 10px;
-        
-        a {font-size: 12px;
+
+        a {
+          font-size: 12px;
           text-decoration: underline;
         }
         a:nth-child(2) {
@@ -729,356 +732,360 @@ body {
       height: 30%;
       position: absolute;
     }
-    .hamburger {
-      display: block;
-      z-index: 2;
+  }
+  .hamburger {
+    display: block;
+    z-index: 2;
+  }
+  .header {
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+    &-bg {
+      background-image: none;
+      background-image: url(../img/Mask\ Group\ \(2\).png);
+      background-position: 100%;
+      min-height: auto;
+      padding-bottom: 50px;
     }
-    .header {
-      justify-content: space-between;
+  }
+  .nav {
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
+    &__collapse {
+      background: linear-gradient(rgba(56, 116, 203) 0%, rgb(17, 52, 104) 100%);
+      top: 0;
+      padding: 20px;
+      padding-top: 100px;
+      min-height: 100vh;
+      right: 0;
+      max-width: 50%;
       box-sizing: border-box;
-      padding: 10px;
-      &-bg {
-        background-image: none;
-        background-image: url(../img/Mask\ Group\ \(2\).png);
-        background-position: 100%;
-        min-height: auto;
-        padding-bottom: 50px;
+      position: fixed;
+      transform: translateX(100%);
+      transition: 0.6s all;
+      &.is-active {
+        transform: translateX(0%);
       }
     }
-    .nav {
-      flex-direction: column;
-      text-align: left;
-      align-items: start;
-      &__collapse {
-        background: linear-gradient(rgba(56, 116, 203) 0%, rgb(17, 52, 104) 100%);
-        top: 0;
-        padding: 20px;
-        padding-top: 100px;
-        min-height: 100vh;
-        right: 0;
-        max-width: 50%;
-        box-sizing: border-box;
-        position: fixed;
-        transform: translateX(100%);
-        transition: 0.6s all;
-        &.is-active {
-          transform: translateX(0%);
-        }
-      }
-      &-address {
-        display: none;
+    &-address {
+      display: none;
+    }
+  }
+  .header-logo {
+    img {
+      width: 50%;
+    }
+  }
+  .banner {
+    gap: 30px;
+    &-title {
+      color: #fff;
+      font-size: 24px;
+      &-bold {
+        font-weight: 800;
       }
     }
-    .header-logo {
-      img {
-        width: 50%;
-      }
-    }
-    .banner {
-      gap: 30px;
-      &-title {
-        color: #fff;
-        font-size: 24px;
-        &-bold {
-          font-weight: 800;
-        }
-      }
-      &-characters {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 10px;
-        &-block {
-          display: flex;
-          gap: 12px;
-          align-items: baseline;
-          p {
-            width: calc(100% - 16px);
-            color: #fff;
-            font-size: 10px;
-            font-style: normal;
-            font-weight: 400;
-          }
-          svg {
-            width: 16px;
-            height: 8.557px;
-          }
-        }
-      }
-    }
-    .card {
-      box-sizing: border-box;
-      &-row {
-        align-items: center;
+    &-characters {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 10px;
+      &-block {
         display: flex;
-        gap: 0px;
-      }
-    }
-    .container {
-      margin: 0 auto;
-      max-width: 95%;
-    }
-    .auto-check-block {
-      max-width: 290px;
-    }
-    .StagesOfWork {
-      margin-top: 100px;
-      &-card {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        max-width: 240px;
-        svg {
-          display: none;
-        }
-        gap: 13px;
-        &-row {
-          display: flex;
-          align-items: center;
-          margin-top: 100px;
-          gap: 20px;
-          position: relative;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-        &-line {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          position: relative;
-          background: #d3d7e0;
-          z-index: 98;
-          position: absolute;
-          justify-content: space-between;
-          height: 2px;
-          display: none;
-          top: 42%;
-
-          svg:nth-child(1) {
-            position: absolute;
-            left: 20%;
-            z-index: 99;
-          }
-          svg:nth-child(2) {
-            position: absolute;
-            left: 45%;
-            z-index: 99;
-          }
-          svg:nth-child(3) {
-            position: absolute;
-            left: 75%;
-            z-index: 99;
-          }
-        }
+        gap: 12px;
+        align-items: baseline;
         p {
-          color: #78808f;
-          font-size: 16px;
+          width: calc(100% - 16px);
+          color: #fff;
+          font-size: 10px;
           font-style: normal;
           font-weight: 400;
         }
-        img {
-          width: auto;
-          height: 80px;
+        svg {
+          width: 16px;
+          height: 8.557px;
         }
       }
     }
-    .benefits {
-      background-image: url(../img/Mask\ Group\ \(3\).png);
-      min-height: auto;
-      color: #fff;
-      background-size: auto;
-      max-width: 100vw;
-      background-repeat: no-repeat;
-      &-img {
+  }
+  .card {
+    box-sizing: border-box;
+    &-row {
+      align-items: center;
+      display: flex;
+      gap: 0px;
+    }
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 95%;
+  }
+  .auto-check-block {
+    max-width: 290px;
+  }
+  .StagesOfWork {
+    margin-top: 100px;
+    &-card {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      max-width: 240px;
+      svg {
         display: none;
       }
-      .title {
-        color: #fff !important;
-      }
-      &-block {
-        padding: 20px 0;
-        box-sizing: border-box;
+      gap: 13px;
+      &-row {
         display: flex;
-        flex-direction: row;
-        &-info {
-          max-width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          &-desc {
-            display: flex;
-            gap: 30px;
-            p {
-              width: 100%;
-              color: #fff;
-              font-size: 10px;
-              font-weight: 200;
-            }
-          }
-          &-character {
-            gap: 20px;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            p {
-              color: #fff;
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 700;
-            }
-            &s {
-              grid-template-columns: auto auto;
-              display: grid;
-              gap: 20px;
-            }
-          }
+        align-items: center;
+        margin-top: 100px;
+        gap: 20px;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &-line {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background: #d3d7e0;
+        z-index: 98;
+        position: absolute;
+        justify-content: space-between;
+        height: 2px;
+        display: none;
+        top: 42%;
+
+        svg:nth-child(1) {
+          position: absolute;
+          left: 20%;
+          z-index: 99;
+        }
+        svg:nth-child(2) {
+          position: absolute;
+          left: 45%;
+          z-index: 99;
+        }
+        svg:nth-child(3) {
+          position: absolute;
+          left: 75%;
+          z-index: 99;
         }
       }
-    }
-    .selectedCars {
-      &-card {
-        display: flex !important;
-        align-items: start;
-        flex-direction: row !important;
-        gap: 10px;
-        &-img {
-          border-radius: 12px;
-          width: 50vw;
-          height: auto;
-          &-block {
-            width: 100%;
-            height: 100%;
-          }
-        }
-        &-info {
-          display: flex;
-          width: 400px;
-          flex-direction: column;
-          gap: 10px;
-          h1 {
-            font-size: 16px;
-          }
-          table {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-            width: 100%;
-            color: #78808f;
-            gap: 10px;
-            tr {
-              display: flex;
-              justify-content: space-between;
-              &:hover {
-                color: #3874cb;
-              }
-            }
-            th {
-              font-size: 10px;
-              font-style: normal;
-              font-weight: 500;
-            }
-            td {
-              font-size: 10px;
-              text-align: left;
-              font-style: normal;
-              font-weight: 700;
-            }
-          }
-          ul {
-            h2 {
-              display: flex;
-              gap: 11px;
-              font-size: 14px;
-              svg {
-                width: 20px;
-                height: 20px;
-              }
-            }
-          }
-          li {
-            color: #78808f;
-            margin-left: 40px;
-            font-size: 8px;
-            font-style: normal;
-            font-weight: 400;
-          }
-          &-row {
-            display: flex;
-          }
-        }
-      }
-    }
-    .inputs {
-      display: flex;
-      align-items: start;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 20px;
-      input,
-      select {
-        border-radius: 6px;
-        border: 1px solid rgba(18, 17, 39, 0.12);
-        background: rgba(18, 17, 39, 0.04);
-        color: #78808f;
-        padding: 12px;
-      }
-    }
-    .block-inputs {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      width: 100%;
-      &-block {
-        display: grid;
-        grid-template-columns: auto;
-        gap: 30px;
-      }
-    }
-    .send {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       p {
-        color: #8890a0;
-        font-size: 12px;
+        color: #78808f;
+        font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
-        span {
-          color: #3874cb;
-        }
       }
-      button {
-        text-wrap: nowrap;
+      img {
+        width: auto;
+        height: 80px;
       }
     }
-    .selectedCars-pagination {
-      transform: translateY(-150px);
-      max-width: 50%;
-      button {
-        max-width: 70px;
-        max-height: 50px;
+  }
 
-        img {
+  .benefits {
+    background-image: url(../img/Mask\ Group\ \(3\).png);
+    min-height: auto;
+    color: #fff;
+    background-size: auto;
+    max-width: 100vw;
+    background-repeat: no-repeat;
+
+    .title {
+      color: #fff !important;
+    }
+    &-block {
+      padding: 20px 0;
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      &-info {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        &-desc {
+          display: flex;
+          gap: 30px;
+          p {
+            width: 100%;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 200;
+          }
+        }
+        &-character {
+          gap: 20px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          p {
+            color: #fff;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+          }
+          &s {
+            grid-template-columns: auto auto;
+            display: grid;
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+  .selectedCars {
+    &-card {
+      display: flex !important;
+      align-items: start;
+      flex-direction: row !important;
+      gap: 10px;
+      &-img {
+        border-radius: 12px;
+        width: 50vw;
+        height: auto;
+        &-block {
           width: 100%;
           height: 100%;
         }
       }
-    }
-    .slick-list {
-      width: 100%;
-      padding: 0 !important;
-      transform: translate3d(-190px, 0, 0);
-    }
-    .slick-track {
-      display: flex;
-      margin: 0;
-      overflow-x: scroll;
-      &::-webkit-scrollbar {
-        display: none;
+      &-info {
+        display: flex;
+        width: 400px;
+        flex-direction: column;
+        gap: 10px;
+        h1 {
+          font-size: 16px;
+        }
+        table {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+          width: 100%;
+          color: #78808f;
+          gap: 10px;
+          tr {
+            display: flex;
+            justify-content: space-between;
+            &:hover {
+              color: #3874cb;
+            }
+          }
+          th {
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 500;
+          }
+          td {
+            font-size: 10px;
+            text-align: left;
+            font-style: normal;
+            font-weight: 700;
+          }
+        }
+        ul {
+          h2 {
+            display: flex;
+            gap: 11px;
+            font-size: 14px;
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        li {
+          color: #78808f;
+          margin-left: 40px;
+          font-size: 8px;
+          font-style: normal;
+          font-weight: 400;
+        }
+        &-row {
+          display: flex;
+        }
       }
     }
+  }
+  .inputs {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    input,
+    select {
+      border-radius: 6px;
+      border: 1px solid rgba(18, 17, 39, 0.12);
+      background: rgba(18, 17, 39, 0.04);
+      color: #78808f;
+      padding: 12px;
+    }
+  }
+  .block-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    &-block {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 30px;
+    }
+  }
+  .send {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      color: #8890a0;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      span {
+        color: #3874cb;
+      }
+    }
+    button {
+      text-wrap: nowrap;
+    }
+  }
+  .selectedCars-pagination {
+    transform: translateY(-100px);
+    max-width: 50%;
+    button {
+      width: 70px;
+      height: 50px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .slick-list {
+    width: 100%;
+    padding: 0 !important;
+    transform: translate3d(-190px, 0, 0);
+  }
+  .slick-track {
+    display: flex;
+    margin: 0;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .benefits-img {
+    display: none;
   }
 }
