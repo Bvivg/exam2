@@ -1,0 +1,1082 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: transparent;
+}
+
+body {
+  width: 100%;
+}
+
+.wrapper {
+  font-family: "Manrope";
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1197px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  flex-direction: row;
+  width: 100%;
+}
+.header-bg {
+  background-image: url(../img/Mask\ Group.png);
+  min-height: 100vh;
+  color: #fff;
+  max-width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+.nav__collapse {
+  margin-left: auto;
+  text-align: right;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.nav-address {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  width: max-content;
+  gap: 30px;
+}
+.nav-address-tel {
+  color: #fff;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+}
+.nav-address-btn {
+  border-radius: 70px;
+  background: #3874cb;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px 30px;
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  max-width: max-content;
+  font-weight: 700;
+  transition: 0.6s all;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nav-address-btn:hover {
+  color: #3874cb;
+  background: #ffffff;
+}
+.nav-link {
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+.nav-link::before {
+  position: absolute;
+  width: 0;
+  transition: 0.3s ease-in-out;
+  height: 2px;
+  content: "";
+  right: 50%;
+  bottom: -2px;
+  background: #3874cb;
+}
+.nav-link::after {
+  position: absolute;
+  width: 0;
+  transition: 0.3s ease-in-out;
+  height: 2px;
+  left: 50%;
+  content: "";
+  bottom: -2px;
+  background: #3874cb;
+}
+.nav-link:hover {
+  color: #3874cb;
+}
+.nav-link:hover::before {
+  width: 50%;
+}
+.nav-link:hover::after {
+  width: 50%;
+}
+
+.hamburger {
+  display: none;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.banner-title {
+  color: #fff;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.banner-title-bold {
+  font-weight: 800;
+}
+.banner-characters {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  width: 50%;
+}
+.banner-characters-block {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.banner-characters-block p {
+  width: calc(100% - 16px);
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.banner-characters-block svg {
+  width: 16px;
+  height: 8.557px;
+}
+
+.subtitle {
+  color: #8890a0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.title {
+  color: #0d0c13;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card {
+  display: flex;
+  max-width: 366px !important;
+  width: 100%;
+  padding: 24px;
+  flex-direction: column;
+  height: 818px;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  align-items: center;
+  gap: 23px;
+  border-radius: 12px;
+  background: #d3d7e0;
+  box-shadow: 0px 6px 30px 0px rgba(18, 17, 39, 0.15);
+}
+.card-title-block {
+  display: flex;
+  align-items: end;
+}
+.card-title-block img {
+  margin-left: -75px;
+  margin-bottom: -40px;
+}
+.card-title-number {
+  color: #255eb1;
+  font-family: "Montserrat";
+  font-size: 112px;
+  font-style: normal;
+  font-weight: 800;
+  display: flex;
+  align-items: baseline;
+  gap: 30px;
+}
+.card-title-number1 {
+  margin-left: -60px;
+  color: #3874cb;
+  font-size: 144px;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.card-title {
+  color: #0d0c13;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+}
+.card ul {
+  color: #78808f;
+  font-size: 16px;
+  padding: 24px;
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 23px;
+  border-bottom: 1px solid rgba(18, 17, 39, 0.12);
+}
+.card-price {
+  color: #3874cb;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.card-price-bold {
+  color: #3874cb;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+.card-note {
+  color: #78808f;
+  text-align: center;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.card-row {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  display: flex;
+  gap: 33px;
+}
+.card:hover {
+  box-shadow: 0px 10px 40px 0px rgba(136, 144, 160, 0.75);
+}
+.card:hover .card-title {
+  color: #3874cb;
+  text-align: center;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+}
+.card:hover .nav-address-btn {
+  background: #af0c27;
+}
+.card:hover .nav-address-btn:hover {
+  background: #fff;
+  color: #af0c27;
+}
+
+.card-block {
+  margin-top: 50px;
+}
+
+.auto-check {
+  background: rgb(243, 243, 243);
+  margin-top: 120px;
+  position: relative;
+  padding-bottom: 120px;
+  background: linear-gradient(80deg, rgb(243, 243, 243) 0%, rgb(243, 243, 255) 70%, rgb(19, 30, 50) 70%, rgb(19, 30, 50) 100%);
+  padding-top: 100px;
+}
+.auto-check-img {
+  max-width: 600px;
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+.auto-check-block {
+  max-width: 900px;
+  width: 100%;
+}
+.auto-check-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  max-width: 270px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 12px;
+}
+.auto-check-card-block {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  margin: 0;
+}
+.auto-check-card-row {
+  display: flex;
+}
+.auto-check-card h1 {
+  color: #0d0c13;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  /* 6.48px */
+  text-transform: uppercase;
+}
+.auto-check-card p {
+  color: #8890a0;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.auto-check-card img {
+  width: 170px;
+  height: 147px;
+}
+
+.swiper-pagination {
+  position: static;
+}
+.swiper-pagination-bullet {
+  transition: 0.3s ease-in-out;
+  height: 4px;
+  width: 50px;
+  transform: skewX(-60deg);
+  border-radius: 0;
+}
+.swiper-pagination-bullet-active {
+  width: 75px;
+}
+
+.StagesOfWork-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 240px;
+  gap: 13px;
+}
+.StagesOfWork-card-row {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.StagesOfWork-card-line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #d3d7e0;
+  z-index: 98;
+  position: absolute;
+  justify-content: space-between;
+  height: 2px;
+  top: 42%;
+}
+.StagesOfWork-card-line svg:nth-child(1) {
+  position: absolute;
+  left: 20%;
+  z-index: 99;
+}
+.StagesOfWork-card-line svg:nth-child(2) {
+  position: absolute;
+  left: 45%;
+  z-index: 99;
+}
+.StagesOfWork-card-line svg:nth-child(3) {
+  position: absolute;
+  left: 75%;
+  z-index: 99;
+}
+.StagesOfWork-card p {
+  color: #78808f;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.StagesOfWork-card img {
+  width: auto;
+  height: 80px;
+}
+
+.benefits {
+  background-image: url(../img/Mask\ Group\ \(3\).png);
+  min-height: auto;
+  color: #fff;
+  background-size: cover;
+  max-width: 100vw;
+  background-repeat: no-repeat;
+}
+.benefits .title {
+  color: #fff !important;
+}
+.benefits-block {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.benefits-block-info {
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.benefits-block-info-desc {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+.benefits-block-info-desc p {
+  width: 50%;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+}
+.benefits-block-info-character {
+  gap: 50px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+.benefits-block-info-character p {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.benefits-block-info-characters {
+  grid-template-columns: auto auto;
+  display: grid;
+  gap: 50px;
+}
+
+.selectedCars-card {
+  display: flex !important;
+  align-items: start;
+  flex-direction: row !important;
+  gap: 30px;
+}
+.selectedCars-card-img {
+  border-radius: 12px;
+  width: 570px;
+  height: 450px;
+}
+.selectedCars-card-img-block {
+  width: 570px;
+  height: 450px;
+}
+.selectedCars-card-info {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  gap: 30px;
+}
+.selectedCars-card-info table {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  color: #78808f;
+  gap: 10px;
+}
+.selectedCars-card-info table tr {
+  display: flex;
+  justify-content: space-between;
+}
+.selectedCars-card-info table tr:hover {
+  color: #3874cb;
+}
+.selectedCars-card-info table th {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.selectedCars-card-info table td {
+  font-size: 16px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 700;
+}
+.selectedCars-card-info ul h2 {
+  display: flex;
+  gap: 17px;
+}
+.selectedCars-card-info li {
+  color: #78808f;
+  margin-left: 47px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.selectedCars-card-info-row {
+  display: flex;
+}
+
+.selectedCars-card {
+  display: none;
+}
+
+.footer {
+  background: url(../img/Mask\ Group\ \(4\).png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-top: 110px;
+}
+.footer .title {
+  color: #fff;
+}
+.footer-info {
+  margin-top: 40px;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-info table {
+  text-align: left;
+  width: 45%;
+}
+.footer-info table tr {
+  width: 50%;
+}
+.footer-info-number {
+  color: #3874cb;
+}
+.footer-info-number-bold {
+  font-size: 36px;
+  color: #3874cb;
+  font-weight: 700;
+}
+.footer-info-bottom {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-top: 40px;
+}
+.footer-info-bottom a {
+  text-decoration: underline;
+}
+.footer-info-bottom a:nth-child(2) {
+  margin-right: auto;
+}
+
+.selectedCars-pagination {
+  width: 570px;
+}
+.selectedCars-pagination button {
+  max-width: 140px;
+  max-height: 100px;
+}
+.selectedCars-pagination button img {
+  width: 100%;
+  height: 100%;
+}
+
+.slick-list {
+  width: 100%;
+  padding: 0 !important;
+}
+
+.slick-track {
+  display: flex;
+  margin: 0;
+  overflow-x: scroll;
+  transform: translateX(1000px);
+  width: 100%;
+}
+.slick-track::-webkit-scrollbar {
+  display: none;
+}
+
+.inputs {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.inputs input,
+.inputs select {
+  border-radius: 6px;
+  border: 1px solid rgba(18, 17, 39, 0.12);
+  background: rgba(18, 17, 39, 0.04);
+  color: #78808f;
+  padding: 12px;
+}
+
+.feedback {
+  background: #f2f2f2;
+  padding: 120px 0;
+  position: relative;
+}
+.feedback img {
+  height: 50%;
+  position: absolute;
+}
+.feedback .feedback-left {
+  left: 0;
+  bottom: 0;
+}
+.feedback .feedback-right {
+  right: 0;
+  top: 0;
+}
+
+.block-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+}
+.block-inputs-block {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+
+.send {
+  display: flex;
+  align-items: center;
+}
+.send p {
+  color: #8890a0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.send p span {
+  color: #3874cb;
+}
+.send button {
+  text-wrap: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    background: url(../img/Mask\ Group\ \(4\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding-top: 10px;
+  }
+  .footer .title {
+    color: #fff;
+  }
+  .footer-info {
+    margin-top: 40px;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-info img {
+    width: 100%;
+  }
+  .footer-info table {
+    text-align: left;
+  }
+  .footer-info table tr {
+    font-size: 14px;
+  }
+  .footer-info table td {
+    font-size: 14px;
+  }
+  .footer-info-number {
+    color: #3874cb;
+  }
+  .footer-info-number-bold {
+    font-size: 22px;
+    color: #3874cb;
+    font-weight: 700;
+  }
+  .footer-info-bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  .footer-info-bottom a {
+    font-size: 12px;
+    text-decoration: underline;
+  }
+  .footer-info-bottom a:nth-child(2) {
+    margin-right: auto;
+  }
+  .title {
+    color: #0d0c13;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .feedback {
+    padding: 10px 0;
+  }
+  .feedback {
+    background: #f2f2f2;
+    padding: 120px 0;
+    position: relative;
+  }
+  .feedback img {
+    height: 30%;
+    position: absolute;
+  }
+  .feedback .hamburger {
+    display: block;
+    z-index: 2;
+  }
+  .feedback .header {
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .feedback .header-bg {
+    background-image: none;
+    background-image: url(../img/Mask\ Group\ \(2\).png);
+    background-position: 100%;
+    min-height: auto;
+    padding-bottom: 50px;
+  }
+  .feedback .nav {
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
+  }
+  .feedback .nav__collapse {
+    background: linear-gradient(rgb(56, 116, 203) 0%, rgb(17, 52, 104) 100%);
+    top: 0;
+    padding: 20px;
+    padding-top: 100px;
+    min-height: 100vh;
+    right: 0;
+    max-width: 50%;
+    box-sizing: border-box;
+    position: fixed;
+    transform: translateX(100%);
+    transition: 0.6s all;
+  }
+  .feedback .nav__collapse.is-active {
+    transform: translateX(0%);
+  }
+  .feedback .nav-address {
+    display: none;
+  }
+  .feedback .header-logo img {
+    width: 50%;
+  }
+  .feedback .banner {
+    gap: 30px;
+  }
+  .feedback .banner-title {
+    color: #fff;
+    font-size: 24px;
+  }
+  .feedback .banner-title-bold {
+    font-weight: 800;
+  }
+  .feedback .banner-characters {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+  .feedback .banner-characters-block {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+  }
+  .feedback .banner-characters-block p {
+    width: calc(100% - 16px);
+    color: #fff;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .feedback .banner-characters-block svg {
+    width: 16px;
+    height: 8.557px;
+  }
+  .feedback .card {
+    box-sizing: border-box;
+  }
+  .feedback .card-row {
+    align-items: center;
+    display: flex;
+    gap: 0px;
+  }
+  .feedback .container {
+    margin: 0 auto;
+    max-width: 95%;
+  }
+  .feedback .auto-check-block {
+    max-width: 290px;
+  }
+  .feedback .StagesOfWork {
+    margin-top: 100px;
+  }
+  .feedback .StagesOfWork-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: 240px;
+    gap: 13px;
+  }
+  .feedback .StagesOfWork-card svg {
+    display: none;
+  }
+  .feedback .StagesOfWork-card-row {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    gap: 20px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .feedback .StagesOfWork-card-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #d3d7e0;
+    z-index: 98;
+    position: absolute;
+    justify-content: space-between;
+    height: 2px;
+    display: none;
+    top: 42%;
+  }
+  .feedback .StagesOfWork-card-line svg:nth-child(1) {
+    position: absolute;
+    left: 20%;
+    z-index: 99;
+  }
+  .feedback .StagesOfWork-card-line svg:nth-child(2) {
+    position: absolute;
+    left: 45%;
+    z-index: 99;
+  }
+  .feedback .StagesOfWork-card-line svg:nth-child(3) {
+    position: absolute;
+    left: 75%;
+    z-index: 99;
+  }
+  .feedback .StagesOfWork-card p {
+    color: #78808f;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .feedback .StagesOfWork-card img {
+    width: auto;
+    height: 80px;
+  }
+  .feedback .benefits {
+    background-image: url(../img/Mask\ Group\ \(3\).png);
+    min-height: auto;
+    color: #fff;
+    background-size: auto;
+    max-width: 100vw;
+    background-repeat: no-repeat;
+  }
+  .feedback .benefits-img {
+    display: none;
+  }
+  .feedback .benefits .title {
+    color: #fff !important;
+  }
+  .feedback .benefits-block {
+    padding: 20px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+  }
+  .feedback .benefits-block-info {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .feedback .benefits-block-info-desc {
+    display: flex;
+    gap: 30px;
+  }
+  .feedback .benefits-block-info-desc p {
+    width: 100%;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 200;
+  }
+  .feedback .benefits-block-info-character {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .feedback .benefits-block-info-character p {
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .feedback .benefits-block-info-characters {
+    grid-template-columns: auto auto;
+    display: grid;
+    gap: 20px;
+  }
+  .feedback .selectedCars-card {
+    display: flex !important;
+    align-items: start;
+    flex-direction: row !important;
+    gap: 10px;
+  }
+  .feedback .selectedCars-card-img {
+    border-radius: 12px;
+    width: 50vw;
+    height: auto;
+  }
+  .feedback .selectedCars-card-img-block {
+    width: 100%;
+    height: 100%;
+  }
+  .feedback .selectedCars-card-info {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .feedback .selectedCars-card-info h1 {
+    font-size: 16px;
+  }
+  .feedback .selectedCars-card-info table {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    color: #78808f;
+    gap: 10px;
+  }
+  .feedback .selectedCars-card-info table tr {
+    display: flex;
+    justify-content: space-between;
+  }
+  .feedback .selectedCars-card-info table tr:hover {
+    color: #3874cb;
+  }
+  .feedback .selectedCars-card-info table th {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .feedback .selectedCars-card-info table td {
+    font-size: 10px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .feedback .selectedCars-card-info ul h2 {
+    display: flex;
+    gap: 11px;
+    font-size: 14px;
+  }
+  .feedback .selectedCars-card-info ul h2 svg {
+    width: 20px;
+    height: 20px;
+  }
+  .feedback .selectedCars-card-info li {
+    color: #78808f;
+    margin-left: 40px;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .feedback .selectedCars-card-info-row {
+    display: flex;
+  }
+  .feedback .inputs {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .feedback .inputs input,
+.feedback .inputs select {
+    border-radius: 6px;
+    border: 1px solid rgba(18, 17, 39, 0.12);
+    background: rgba(18, 17, 39, 0.04);
+    color: #78808f;
+    padding: 12px;
+  }
+  .feedback .block-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+  .feedback .block-inputs-block {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 30px;
+  }
+  .feedback .send {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feedback .send p {
+    color: #8890a0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .feedback .send p span {
+    color: #3874cb;
+  }
+  .feedback .send button {
+    text-wrap: nowrap;
+  }
+  .feedback .selectedCars-pagination {
+    transform: translateY(-150px);
+    max-width: 50%;
+  }
+  .feedback .selectedCars-pagination button {
+    max-width: 70px;
+    max-height: 50px;
+  }
+  .feedback .selectedCars-pagination button img {
+    width: 100%;
+    height: 100%;
+  }
+  .feedback .slick-list {
+    width: 100%;
+    padding: 0 !important;
+    transform: translate3d(-190px, 0, 0);
+  }
+  .feedback .slick-track {
+    display: flex;
+    margin: 0;
+    overflow-x: scroll;
+  }
+  .feedback .slick-track::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

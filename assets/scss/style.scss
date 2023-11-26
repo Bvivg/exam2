@@ -1,0 +1,1084 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: transparent;
+}
+body {
+  width: 100%;
+}
+.wrapper {
+  font-family: "Manrope";
+  overflow: hidden;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1197px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  flex-direction: row;
+
+  width: 100%;
+  &-bg {
+    background-image: url(../img/Mask\ Group.png);
+    min-height: 100vh;
+    color: #fff;
+    max-width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.nav {
+  &__collapse {
+    margin-left: auto;
+    text-align: right;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &-address {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    width: max-content;
+    gap: 30px;
+    &-tel {
+      color: #fff;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+    }
+    &-btn {
+      border-radius: 70px;
+      background: #3874cb;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      padding: 20px 30px;
+      color: #fff;
+      font-size: 12px;
+      font-style: normal;
+      max-width: max-content;
+      font-weight: 700;
+      transition: 0.6s all;
+      text-align: center;
+      text-transform: uppercase;
+      &:hover {
+        color: #3874cb;
+        background: #ffffff;
+      }
+    }
+  }
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  &-link {
+    transition: 0.3s ease-in-out;
+    position: relative;
+    &::before {
+      position: absolute;
+      width: 0;
+      transition: 0.3s ease-in-out;
+      height: 2px;
+      content: "";
+      right: 50%;
+      bottom: -2px;
+      background: #3874cb;
+    }
+    &::after {
+      position: absolute;
+      width: 0;
+      transition: 0.3s ease-in-out;
+      height: 2px;
+      left: 50%;
+      content: "";
+      bottom: -2px;
+      background: #3874cb;
+    }
+    &:hover {
+      color: #3874cb;
+      &::before {
+        width: 50%;
+      }
+      &::after {
+        width: 50%;
+      }
+    }
+  }
+}
+.hamburger {
+  display: none;
+}
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  &-title {
+    color: #fff;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 200;
+    text-transform: uppercase;
+    &-bold {
+      font-weight: 800;
+    }
+  }
+  &-characters {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    width: 50%;
+    &-block {
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+      p {
+        width: calc(100% - 16px);
+        color: #fff;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+      }
+      svg {
+        width: 16px;
+        height: 8.557px;
+      }
+    }
+  }
+}
+.subtitle {
+  color: #8890a0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.title {
+  color: #0d0c13;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card {
+  &-title-block {
+    display: flex;
+    align-items: end;
+    img {
+      margin-left: -75px;
+      margin-bottom: -40px;
+    }
+  }
+  &-title-number {
+    color: #255eb1;
+    font-family: "Montserrat";
+    font-size: 112px;
+    font-style: normal;
+    font-weight: 800;
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
+    &0 {
+    }
+    &1 {
+      margin-left: -60px;
+      color: #3874cb;
+      font-size: 144px;
+      font-style: normal;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+  display: flex;
+  max-width: 366px !important;
+  width: 100%;
+  padding: 24px;
+  flex-direction: column;
+  height: 818px;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  align-items: center;
+  gap: 23px;
+  border-radius: 12px;
+  background: #d3d7e0;
+  box-shadow: 0px 6px 30px 0px rgba(18, 17, 39, 0.15);
+  &-title {
+    color: #0d0c13;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  ul {
+    color: #78808f;
+    font-size: 16px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgba(18, 17, 39, 0.12);
+  }
+  &-price {
+    color: #3874cb;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    &-bold {
+      color: #3874cb;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+  &-note {
+    color: #78808f;
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  &-row {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 33px;
+  }
+  &:hover {
+    box-shadow: 0px 10px 40px 0px rgba(136, 144, 160, 0.75);
+    .card-title {
+      color: #3874cb;
+      text-align: center;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 700;
+    }
+    .nav-address-btn {
+      background: #af0c27;
+      &:hover {
+        background: #fff;
+        color: #af0c27;
+      }
+    }
+  }
+}
+.card-block {
+  margin-top: 50px;
+}
+
+.auto-check {
+  background: rgb(243, 243, 243);
+  margin-top: 120px;
+  position: relative;
+  padding-bottom: 120px;
+  background: linear-gradient(
+    80deg,
+    rgba(243, 243, 243, 1) 0%,
+    rgba(243, 243, 255, 1) 70%,
+    rgba(19, 30, 50, 1) 70%,
+    rgba(19, 30, 50, 1) 100%
+  );
+  &-img {
+    max-width: 600px;
+    position: absolute;
+    right: 0;
+    top: 30%;
+  }
+  padding-top: 100px;
+  &-block {
+    max-width: 900px;
+    width: 100%;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    max-width: 270px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 12px;
+    &-block {
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      margin: 0;
+    }
+    &-row {
+      display: flex;
+    }
+    h1 {
+      color: #0d0c13;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      /* 6.48px */
+      text-transform: uppercase;
+    }
+    p {
+      color: #8890a0;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+    }
+    img {
+      width: 170px;
+      height: 147px;
+    }
+  }
+}
+.swiper-pagination {
+  position: static;
+  &-bullet {
+    transition: 0.3s ease-in-out;
+    height: 4px;
+    width: 50px;
+    transform: skewX(-60deg);
+    border-radius: 0;
+    &-active {
+      width: 75px;
+    }
+  }
+}
+.StagesOfWork {
+  &-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: 240px;
+    gap: 13px;
+    &-row {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &-line {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background: #d3d7e0;
+      z-index: 98;
+      position: absolute;
+      justify-content: space-between;
+      height: 2px;
+      top: 42%;
+
+      svg:nth-child(1) {
+        position: absolute;
+        left: 20%;
+        z-index: 99;
+      }
+      svg:nth-child(2) {
+        position: absolute;
+        left: 45%;
+        z-index: 99;
+      }
+      svg:nth-child(3) {
+        position: absolute;
+        left: 75%;
+        z-index: 99;
+      }
+    }
+    p {
+      color: #78808f;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+    }
+    img {
+      width: auto;
+      height: 80px;
+    }
+  }
+}
+.benefits {
+  background-image: url(../img/Mask\ Group\ \(3\).png);
+  min-height: auto;
+
+  color: #fff;
+  background-size: cover;
+  max-width: 100vw;
+  background-repeat: no-repeat;
+  .title {
+    color: #fff !important;
+  }
+  &-block {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    &-info {
+      max-width: 65%;
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+      &-desc {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        p {
+          width: 50%;
+          color: #fff;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+        }
+      }
+      &-character {
+        gap: 50px;
+
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        p {
+          color: #fff;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+        }
+        &s {
+          grid-template-columns: auto auto;
+          display: grid;
+          gap: 50px;
+        }
+      }
+    }
+  }
+}
+.selectedCars {
+  &-card {
+    display: flex !important;
+    align-items: start;
+    flex-direction: row !important;
+    gap: 30px;
+    &-img {
+      border-radius: 12px;
+      width: 570px;
+      height: 450px;
+      &-block {
+        width: 570px;
+        height: 450px;
+      }
+    }
+    &-info {
+      display: flex;
+      width: 400px;
+      flex-direction: column;
+      gap: 30px;
+      table {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        color: #78808f;
+        gap: 10px;
+        tr {
+          display: flex;
+          justify-content: space-between;
+          &:hover {
+            color: #3874cb;
+          }
+        }
+        th {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+        }
+        td {
+          font-size: 16px;
+          text-align: left;
+          font-style: normal;
+          font-weight: 700;
+        }
+      }
+      ul {
+        h2 {
+          display: flex;
+          gap: 17px;
+        }
+      }
+      li {
+        color: #78808f;
+        margin-left: 47px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+      }
+      &-row {
+        display: flex;
+      }
+    }
+  }
+}
+.selectedCars-card {
+  display: none;
+}
+.footer {
+  background: url(../img/Mask\ Group\ \(4\).png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-top: 110px;
+  & .title {
+    color: #fff;
+  }
+  &-info {
+    margin-top: 40px;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    table {
+      text-align: left;width: 45%;
+      tr{
+        width: 50%;
+      }
+    }
+    &-number {
+      color: #3874cb;
+      &-bold {
+        font-size: 36px;
+        color: #3874cb;
+        font-weight: 700;
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+      a {
+        text-decoration: underline;
+      }
+      a:nth-child(2) {
+        margin-right: auto;
+      }
+      margin-top: 40px;
+    }
+  }
+}
+.selectedCars-pagination {
+  width: 570px;
+  button {
+    max-width: 140px;
+    max-height: 100px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.slick-list {
+  width: 100%;
+  padding: 0 !important;
+}
+.slick-track {
+  display: flex;
+  margin: 0;
+  overflow-x: scroll;
+  transform: translateX(1000px);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  width: 100%;
+}
+.inputs {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+  input,
+  select {
+    border-radius: 6px;
+    border: 1px solid rgba(18, 17, 39, 0.12);
+    background: rgba(18, 17, 39, 0.04);
+    color: #78808f;
+    padding: 12px;
+  }
+}
+.feedback {
+  background: #f2f2f2;
+  padding: 120px 0;
+  position: relative;
+  img {
+    height: 50%;
+    position: absolute;
+  }
+  .feedback-left {
+    left: 0;
+    bottom: 0;
+  }
+  .feedback-right {
+    right: 0;
+    top: 0;
+  }
+}
+.block-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+  &-block {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+}
+.send {
+  display: flex;
+  align-items: center;
+  p {
+    color: #8890a0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    span {
+      color: #3874cb;
+    }
+  }
+  button {
+    text-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    background: url(../img/Mask\ Group\ \(4\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding-top: 10px;
+    & .title {
+      color: #fff;
+    }
+    &-info {
+      margin-top: 40px;
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      img{
+        width: 100%;
+      }
+      flex-direction: column;
+      justify-content: space-between;
+      table {
+        text-align: left;
+        tr{
+          font-size: 14px;
+        }
+        td{
+          font-size: 14px;
+        }
+      }
+      &-number {
+        color: #3874cb;
+        &-bold {
+          font-size: 22px;
+          color: #3874cb;
+          font-weight: 700;
+        }
+      }
+      &-bottom {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        a {font-size: 12px;
+          text-decoration: underline;
+        }
+        a:nth-child(2) {
+          margin-right: auto;
+        }
+        margin-top: 40px;
+      }
+    }
+  }
+  .title {
+    color: #0d0c13;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .feedback {
+    padding: 10px 0;
+  }
+  .feedback {
+    background: #f2f2f2;
+    padding: 120px 0;
+    position: relative;
+    img {
+      height: 30%;
+      position: absolute;
+    }
+    .hamburger {
+      display: block;
+      z-index: 2;
+    }
+    .header {
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 10px;
+      &-bg {
+        background-image: none;
+        background-image: url(../img/Mask\ Group\ \(2\).png);
+        background-position: 100%;
+        min-height: auto;
+        padding-bottom: 50px;
+      }
+    }
+    .nav {
+      flex-direction: column;
+      text-align: left;
+      align-items: start;
+      &__collapse {
+        background: linear-gradient(rgba(56, 116, 203) 0%, rgb(17, 52, 104) 100%);
+        top: 0;
+        padding: 20px;
+        padding-top: 100px;
+        min-height: 100vh;
+        right: 0;
+        max-width: 50%;
+        box-sizing: border-box;
+        position: fixed;
+        transform: translateX(100%);
+        transition: 0.6s all;
+        &.is-active {
+          transform: translateX(0%);
+        }
+      }
+      &-address {
+        display: none;
+      }
+    }
+    .header-logo {
+      img {
+        width: 50%;
+      }
+    }
+    .banner {
+      gap: 30px;
+      &-title {
+        color: #fff;
+        font-size: 24px;
+        &-bold {
+          font-weight: 800;
+        }
+      }
+      &-characters {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        &-block {
+          display: flex;
+          gap: 12px;
+          align-items: baseline;
+          p {
+            width: calc(100% - 16px);
+            color: #fff;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          svg {
+            width: 16px;
+            height: 8.557px;
+          }
+        }
+      }
+    }
+    .card {
+      box-sizing: border-box;
+      &-row {
+        align-items: center;
+        display: flex;
+        gap: 0px;
+      }
+    }
+    .container {
+      margin: 0 auto;
+      max-width: 95%;
+    }
+    .auto-check-block {
+      max-width: 290px;
+    }
+    .StagesOfWork {
+      margin-top: 100px;
+      &-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        max-width: 240px;
+        svg {
+          display: none;
+        }
+        gap: 13px;
+        &-row {
+          display: flex;
+          align-items: center;
+          margin-top: 100px;
+          gap: 20px;
+          position: relative;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        &-line {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          position: relative;
+          background: #d3d7e0;
+          z-index: 98;
+          position: absolute;
+          justify-content: space-between;
+          height: 2px;
+          display: none;
+          top: 42%;
+
+          svg:nth-child(1) {
+            position: absolute;
+            left: 20%;
+            z-index: 99;
+          }
+          svg:nth-child(2) {
+            position: absolute;
+            left: 45%;
+            z-index: 99;
+          }
+          svg:nth-child(3) {
+            position: absolute;
+            left: 75%;
+            z-index: 99;
+          }
+        }
+        p {
+          color: #78808f;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+        }
+        img {
+          width: auto;
+          height: 80px;
+        }
+      }
+    }
+    .benefits {
+      background-image: url(../img/Mask\ Group\ \(3\).png);
+      min-height: auto;
+      color: #fff;
+      background-size: auto;
+      max-width: 100vw;
+      background-repeat: no-repeat;
+      &-img {
+        display: none;
+      }
+      .title {
+        color: #fff !important;
+      }
+      &-block {
+        padding: 20px 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        &-info {
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          &-desc {
+            display: flex;
+            gap: 30px;
+            p {
+              width: 100%;
+              color: #fff;
+              font-size: 10px;
+              font-weight: 200;
+            }
+          }
+          &-character {
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            p {
+              color: #fff;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 700;
+            }
+            &s {
+              grid-template-columns: auto auto;
+              display: grid;
+              gap: 20px;
+            }
+          }
+        }
+      }
+    }
+    .selectedCars {
+      &-card {
+        display: flex !important;
+        align-items: start;
+        flex-direction: row !important;
+        gap: 10px;
+        &-img {
+          border-radius: 12px;
+          width: 50vw;
+          height: auto;
+          &-block {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &-info {
+          display: flex;
+          width: 400px;
+          flex-direction: column;
+          gap: 10px;
+          h1 {
+            font-size: 16px;
+          }
+          table {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            width: 100%;
+            color: #78808f;
+            gap: 10px;
+            tr {
+              display: flex;
+              justify-content: space-between;
+              &:hover {
+                color: #3874cb;
+              }
+            }
+            th {
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 500;
+            }
+            td {
+              font-size: 10px;
+              text-align: left;
+              font-style: normal;
+              font-weight: 700;
+            }
+          }
+          ul {
+            h2 {
+              display: flex;
+              gap: 11px;
+              font-size: 14px;
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+          li {
+            color: #78808f;
+            margin-left: 40px;
+            font-size: 8px;
+            font-style: normal;
+            font-weight: 400;
+          }
+          &-row {
+            display: flex;
+          }
+        }
+      }
+    }
+    .inputs {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      input,
+      select {
+        border-radius: 6px;
+        border: 1px solid rgba(18, 17, 39, 0.12);
+        background: rgba(18, 17, 39, 0.04);
+        color: #78808f;
+        padding: 12px;
+      }
+    }
+    .block-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+      &-block {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 30px;
+      }
+    }
+    .send {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        color: #8890a0;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        span {
+          color: #3874cb;
+        }
+      }
+      button {
+        text-wrap: nowrap;
+      }
+    }
+    .selectedCars-pagination {
+      transform: translateY(-150px);
+      max-width: 50%;
+      button {
+        max-width: 70px;
+        max-height: 50px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .slick-list {
+      width: 100%;
+      padding: 0 !important;
+      transform: translate3d(-190px, 0, 0);
+    }
+    .slick-track {
+      display: flex;
+      margin: 0;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
